@@ -1,0 +1,22 @@
+{
+  "connection": "default",
+  "collectionName": "Data",
+  "info": {
+    "name": "data",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "value": {
+      "type": "integer"
+    },
+    "sensor_id": {
+      "type": "string"
+    },
+    "bitmask": {
+      "type": "json"
+    }
+  }
+}

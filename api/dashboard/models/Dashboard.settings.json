@@ -1,0 +1,34 @@
+{
+  "connection": "default",
+  "collectionName": "Dashboard",
+  "info": {
+    "name": "dashboard",
+    "description": "Dashboard collection for site"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "site": {
+      "model": "site",
+      "via": "dashboards"
+    },
+    "viewers": {
+      "collection": "user",
+      "via": "dashboards",
+      "plugin": "users-permissions"
+    },
+    "widgets": {
+      "collection": "widget",
+      "dominant": true,
+      "via": "dashboard"
+    },
+    "layouts": {
+      "type": "json"
+    }
+  }
+}

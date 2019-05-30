@@ -1,0 +1,100 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/site",
+      "handler": "Site.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/account/site",
+      "handler": "Site.findCompanySite",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/account/site/me",
+      "handler": "Site.findMySite",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/site/:_id",
+      "handler": "Site.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/account/site/:_id",
+      "handler": "Site.findOneCompanySite",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/site",
+      "handler": "Site.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/account/site",
+      "handler": "Site.createCompanySite",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/site/:_id",
+      "handler": "Site.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/account/site/me",
+      "handler": "Site.updateManagerSite",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/account/site/:_id",
+      "handler": "Site.updateCompanySite",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/site/:_id",
+      "handler": "Site.destroy",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/account/site/:_id",
+      "handler": "Site.destroyCompanySite",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

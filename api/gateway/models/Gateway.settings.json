@@ -1,0 +1,43 @@
+{
+  "connection": "default",
+  "collectionName": "Gateway",
+  "info": {
+    "name": "gateway",
+    "description": "Gateway collection for RV50 etc."
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "site": {
+      "model": "site",
+      "via": "gateway"
+    },
+    "desc": {
+      "type": "text"
+    },
+    "status": {
+      "default": "pending",
+      "type": "string",
+      "required": true
+    },
+    "devices": {
+      "collection": "device",
+      "via": "gateway",
+      "dominant": true
+    },
+    "lat": {
+      "type": "integer"
+    },
+    "long": {
+      "type": "integer"
+    },
+    "version": {
+      "type": "string"
+    }
+  }
+}

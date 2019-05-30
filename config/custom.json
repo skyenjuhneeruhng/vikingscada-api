@@ -1,0 +1,16 @@
+{
+  "TWILIO_SID": "ACb873607a10d34b11ccfa7a4b91229967",
+  "TWILIO_TOKEN": "91937a0b67327438db90dbabe96911f0",
+  "TWILIO_PHONE": "+19183471847",
+  "APPROVED_ENABLED": false,
+  "COMPANY_USERS_MAX": 8,
+  "COMPANY_MANAGERS_MAX": 3,
+  "DASHBOARDS_MAX": 3,
+  "STRIPE_TOKEN": "sk_live_0Yeh88GU8ClyhvCKpjhSCjwt",
+  "STRIPE_PUBLIC_TOKEN": "pk_live_Sh0BTqcGpSctheSmIEOPioi0",
+  "PAYMENT_SUCCESS_URL": "https://app.vikingscada.com/payment/success",
+  "PAYMENT_FAILED_URL": "https://app.vikingscada.com/payment/cancel",
+  "DEMO_MEGABITES": 20,
+  "APP_URL": "https://app.vikingscada.com",
+  "API_URL": "https://api.vikingscada.com"
+}

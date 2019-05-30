@@ -1,0 +1,69 @@
+{
+  "connection": "default",
+  "collectionName": "Sensor",
+  "info": {
+    "name": "sensor",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "device": {
+      "model": "device",
+      "via": "sensors"
+    },
+    "site": {
+      "model": "site",
+      "via": "sensors"
+    },
+    "tag_name": {
+      "type": "string",
+      "required": true
+    },
+    "modbus_register_type": {
+      "type": "string",
+      "required": true
+    },
+    "modbus_register_address": {
+      "type": "integer",
+      "required": true
+    },
+    "modbus_data_type": {
+      "type": "string"
+    },
+    "modbus_data_size_bytes": {
+      "type": "integer",
+      "required": true
+    },
+    "sampling_internal_ms": {
+      "type": "integer",
+      "required": true
+    },
+    "value_multiplier": {
+      "type": "integer",
+      "required": true
+    },
+    "units": {
+      "type": "string"
+    },
+    "widgets_attached": {
+      "collection": "widget",
+      "via": "sensor",
+      "dominant": true
+    },
+    "bitmask": {
+      "type": "string"
+    },
+    "engineer_value_from": {
+      "type": "integer"
+    },
+    "engineer_value_to": {
+      "type": "integer"
+    }
+  }
+}

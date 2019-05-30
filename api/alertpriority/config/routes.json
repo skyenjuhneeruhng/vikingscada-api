@@ -1,0 +1,164 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/account/priority/voice",
+      "handler": "Alertpriority.getVoicePriority",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/account/priority/sms",
+      "handler": "Alertpriority.getSMSPriority",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/account/priority/email",
+      "handler": "Alertpriority.getEmailPriority",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/alertpriority",
+      "handler": "Alertpriority.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/alertpriority/:_id",
+      "handler": "Alertpriority.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/alertpriority",
+      "handler": "Alertpriority.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/account/priority/voice/:_id/enable",
+      "handler": "Alertpriority.enableVoicePriority",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/account/priority/voice/:_id/disable",
+      "handler": "Alertpriority.disableVoicePriority",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/account/priority/sms/:_id/enable",
+      "handler": "Alertpriority.enableSMSPriority",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/account/priority/sms/:_id/disable",
+      "handler": "Alertpriority.disableSMSPriority",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/account/priority/email/:_id/enable",
+      "handler": "Alertpriority.enableEmailPriority",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/account/priority/email/:_id/disable",
+      "handler": "Alertpriority.disableEmailPriority",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/account/priority/voice/:_id/up",
+      "handler": "Alertpriority.upVoicePriority",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/account/priority/voice/:_id/down",
+      "handler": "Alertpriority.downVoicePriority",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/account/priority/sms/:_id/up",
+      "handler": "Alertpriority.upSMSPriority",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/account/priority/sms/:_id/down",
+      "handler": "Alertpriority.downSMSPriority",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/account/priority/email/:_id/up",
+      "handler": "Alertpriority.upEmailPriority",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/account/priority/email/:_id/down",
+      "handler": "Alertpriority.downEmailPriority",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/alertpriority/:_id",
+      "handler": "Alertpriority.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/alertpriority/:_id",
+      "handler": "Alertpriority.destroy",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

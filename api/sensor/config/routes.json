@@ -1,0 +1,92 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/sensor",
+      "handler": "Sensor.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/sensor/:_id",
+      "handler": "Sensor.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/sensor",
+      "handler": "Sensor.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/sensor/:_id",
+      "handler": "Sensor.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/sensor/:_id",
+      "handler": "Sensor.destroy",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/account/sensor/:site_id",
+      "handler": "Sensor.getSensors",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/account/sensor/:site_id/:_id",
+      "handler": "Sensor.getSensor",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/account/sensor/:site_id",
+      "handler": "Sensor.createSensor",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/account/sensor/:site_id/:_id",
+      "handler": "Sensor.updateSensor",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/command/sensor/:_id",
+      "handler": "Sensor.sendCommandToSensor",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/account/sensor/:site_id/:_id",
+      "handler": "Sensor.destroySensor",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

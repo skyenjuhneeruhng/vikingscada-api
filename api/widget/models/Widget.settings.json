@@ -1,0 +1,33 @@
+{
+  "connection": "default",
+  "collectionName": "Widget",
+  "info": {
+    "name": "widget",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "default": "Widget name",
+      "type": "string",
+      "required": true
+    },
+    "settings": {
+      "type": "json"
+    },
+    "dashboard": {
+      "model": "dashboard",
+      "via": "widgets"
+    },
+    "alert_rule": {
+      "model": "alertrule",
+      "via": "widget"
+    },
+    "sensor": {
+      "model": "sensor",
+      "via": "widgets_attached"
+    }
+  }
+}

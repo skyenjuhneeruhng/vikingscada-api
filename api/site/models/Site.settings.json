@@ -1,0 +1,61 @@
+{
+  "connection": "default",
+  "collectionName": "Sites",
+  "info": {
+    "name": "site",
+    "description": "Site collection belong to Company and has Dashboard childs"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "location": {
+      "type": "string",
+      "required": true
+    },
+    "company": {
+      "model": "company",
+      "via": "sites"
+    },
+    "managers": {
+      "collection": "user",
+      "dominant": true,
+      "via": "site_manager",
+      "plugin": "users-permissions"
+    },
+    "viewers": {
+      "collection": "user",
+      "dominant": true,
+      "via": "site_viewer",
+      "plugin": "users-permissions"
+    },
+    "dashboards": {
+      "collection": "dashboard",
+      "dominant": true,
+      "via": "site"
+    },
+    "type": {
+      "type": "string",
+      "required": true
+    },
+    "gateway": {
+      "collection": "gateway",
+      "dominant": true,
+      "via": "site"
+    },
+    "devices": {
+      "collection": "device",
+      "dominant": true,
+      "via": "site"
+    },
+    "sensors": {
+      "collection": "sensor",
+      "dominant": true,
+      "via": "site"
+    }
+  }
+}

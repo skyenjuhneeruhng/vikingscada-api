@@ -1,0 +1,59 @@
+{
+  "connection": "default",
+  "collectionName": "Alerts",
+  "info": {
+    "name": "alerts",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "readed": {
+      "type": "boolean"
+    },
+    "type": {
+      "default": "warning",
+      "type": "string",
+      "required": true
+    },
+    "widget_title": {
+      "type": "string"
+    },
+    "company_id": {
+      "type": "string"
+    },
+    "widget_id": {
+      "type": "string"
+    },
+    "sensor_id": {
+      "type": "string"
+    },
+    "sensor_value": {
+      "type": "integer"
+    },
+    "alert_value": {
+      "type": "integer"
+    },
+    "users": {
+      "type": "json"
+    },
+    "bit": {
+      "type": "integer"
+    },
+    "sid": {
+      "type": "string"
+    },
+    "user_readed": {
+      "model": "user",
+      "via": "alerts_readed",
+      "plugin": "users-permissions"
+    },
+    "email_code": {
+      "type": "string"
+    },
+    "sms_code": {
+      "type": "string"
+    }
+  }
+}

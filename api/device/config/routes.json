@@ -1,0 +1,84 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/device",
+      "handler": "Device.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/device/:_id",
+      "handler": "Device.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/device",
+      "handler": "Device.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/device/:_id",
+      "handler": "Device.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/device/:_id",
+      "handler": "Device.destroy",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/account/device/:site_id",
+      "handler": "Device.getDevices",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/account/device/:site_id/:_id",
+      "handler": "Device.getDevice",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/account/device/:site_id",
+      "handler": "Device.createDevice",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/account/device/:site_id/:_id",
+      "handler": "Device.updateDevice",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/account/device/:site_id/:_id",
+      "handler": "Device.destroyDevice",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

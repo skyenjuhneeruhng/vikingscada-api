@@ -1,0 +1,104 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/gateway",
+      "handler": "Gateway.find",
+      "config": {
+        "policies": []
+      }
+    }, 
+    {
+      "method": "GET",
+      "path": "/account/gateway/public/auth/:_id",
+      "handler": "Gateway.activateGateway",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/account/gateway/:site_id",
+      "handler": "Gateway.findGateways",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/gateway/:_id",
+      "handler": "Gateway.findOne",
+      "config": {
+        "policies": []
+      }
+    }, 
+    {
+      "method": "GET",
+      "path": "/account/gateway/:site_id/:_id",
+      "handler": "Gateway.findGateway",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/gateway",
+      "handler": "Gateway.create",
+      "config": {
+        "policies": []
+      }
+    }, {
+      "method": "POST",
+      "path": "/account/gateway/:site_id",
+      "handler": "Gateway.createGateway",
+      "config": {
+        "policies": []
+      }
+    }, {
+      "method": "PUT",
+      "path": "/account/gateway/public/geo/:_id",
+      "handler": "Gateway.saveGeoGateway",
+      "config": {
+        "policies": []
+      }
+    }, {
+      "method": "PUT",
+      "path": "/account/gateway/public/traffic/:_id",
+      "handler": "Gateway.saveTrafficGateway",
+      "config": {
+        "policies": []
+      }
+    }, {
+      "method": "PUT",
+      "path": "/account/gateway/:site_id/:_id",
+      "handler": "Gateway.updateGateway",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/gateway/:_id",
+      "handler": "Gateway.update",
+      "config": {
+        "policies": []
+      }
+    }, 
+    {
+      "method": "DELETE",
+      "path": "/account/gateway/:site_id/:_id",
+      "handler": "Gateway.destroyGateway",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/gateway/:_id",
+      "handler": "Gateway.destroy",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

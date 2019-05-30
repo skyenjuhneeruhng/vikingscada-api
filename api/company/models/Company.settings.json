@@ -1,0 +1,88 @@
+{
+  "connection": "default",
+  "collectionName": "Company",
+  "info": {
+    "name": "company",
+    "description": "Company type belong to user"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "company_name": {
+      "type": "string",
+      "required": true
+    },
+    "address": {
+      "type": "string",
+      "required": true
+    },
+    "state": {
+      "type": "string"
+    },
+    "zipcode": {
+      "type": "string"
+    },
+    "admin": {
+      "model": "user",
+      "via": "company_admin",
+      "plugin": "users-permissions"
+    },
+    "managers": {
+      "collection": "user",
+      "via": "manager_company",
+      "dominant": true,
+      "plugin": "users-permissions"
+    },
+    "viewers": {
+      "collection": "user",
+      "via": "viewer_company",
+      "dominant": true,
+      "plugin": "users-permissions"
+    },
+    "viewer_company": {
+      "collection": "company",
+      "via": "viewers"
+    },
+    "status": {
+      "default": "pending",
+      "type": "string"
+    },
+    "sites": {
+      "collection": "site",
+      "via": "company"
+    },
+    "alert_sms_admin": {
+      "default": true,
+      "type": "boolean"
+    },
+    "alert_sms_managers": {
+      "default": true,
+      "type": "boolean"
+    },
+    "alert_sms_viewers": {
+      "default": true,
+      "type": "boolean"
+    },
+    "alert_email_admin": {
+      "default": true,
+      "type": "boolean"
+    },
+    "alert_email_managers": {
+      "default": true,
+      "type": "boolean"
+    },
+    "alert_email_viewers": {
+      "default": true,
+      "type": "boolean"
+    },
+    "alert_priorities": {
+      "collection": "alertpriority",
+      "via": "company",
+      "dominant": true
+    },
+    "company_logo": {
+      "type": "string"
+    }
+  }
+}

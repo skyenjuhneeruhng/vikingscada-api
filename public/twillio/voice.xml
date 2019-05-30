@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+    <Say voice="alice">Warning! The sensor has reached warning data boundary!</Say>
+    <Gather action="http://18.219.0.22:1337/public/alert/confirm">
+        <Say>
+            To confirm receipt of the notification, press 1.
+            To exit, press #.
+        </Say>
+    </Gather>
+</Response>

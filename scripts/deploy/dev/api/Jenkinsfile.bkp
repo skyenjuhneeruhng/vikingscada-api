@@ -1,0 +1,60 @@
+node('slave-Docker') {
+
+  try {
+
+    stage '\u2705 Checkout'
+      checkout scm
+      def status = sh(script: './scripts/deploy/git-commit-dev.sh', returnStdout: true)
+      if(status){
+        currentBuild.result = 'ABORTED'
+        error("Build failed because of this and that..")
+      }
+#      sh './scripts/slack-notifications.sh -t "Start new ${SERVICE} deployment - "${NODE_ENV} -l "https://jenkins.indeema.com/job/Borevo/job/${SERVICE}" -m "Preaparing to new ${SERVICE} build! " -c "GOOD"'
+
+    stage '\u2705 Clean docker containers'
+      sh 'SERVICE=${SERVICE} ./scripts/deploy/clean-docker.sh'
+
+    stage '\u2705 Copy services'
+      sh 'mkdir -p tmp'
+      sh 'mv app tmp/app'
+      sh 'mv views tmp/views'
+      sh 'mv package.json tmp/'
+      sh 'mv webpack.config.js tmp/'
+      sh 'rm -rf app && mkdir -p app'
+      sh 'rm -rf views && mkdir -p views'
+      sh 'mv tmp/app app'
+      sh 'mv tmp/views views'
+      sh 'mv tmp/package.json package.json'
+      sh 'mv tmp/webpack.config.js webpack.config.js'
+      sh 'rm -rf tmp'
+
+#    stage '\u2705 Init yarn workspaces'
+#      sh './scripts/deploy/init-yarn.sh'
+
+#    stage '\u2705 Clean public folder'
+#      sh 'mkdir -p app/web/public'
+#      sh 'yarn clean.web'
+#          stage '\u2705 Web bundle'
+#      sh 'NODE_ENV=${NODE_ENV} yarn deploy.web'
+
+    stage '\u2705 Create image'
+      sh 'NODE_ENV=${NODE_ENV} docker-compose -f scripts/deploy/dev/web/docker-compose.yml build'
+
+    stage '\u2705 Healthckeck'
+      sh 'echo "Healthckeck"'
+
+    stage '\u2705 deploy to ECS'
+      sh 'NODE_ENV=${NODE_ENV} ./scripts/deploy/dev/web/deploy.sh -n ${SERVICE}'
+
+    stage '\u2705 Clean docker containers'
+      sh 'SERVICE=${SERVICE} ./scripts/deploy/clean-docker.sh'
+      sh './scripts/slack-notifications.sh -t "SUCCESS ${SERVICE} deployment - "${NODE_ENV} -l "https://jenkins.indeema.com/job/Borevo/job/${SERVICE}" -m "New docker images was successfully created." -c "GOOD"'
+
+  } catch (Exception err) {
+    if( currentBuild.result != 'ABORTED' ){
+      currentBuild.result = 'FAILURE'
+      // emailext attachLog: true, body: "ERROR! See stage logs for more detail", compressLog: true, subject: 'UDB Jenkins - error web build', to: '${EMAILS}'
+      sh './scripts/slack-notifications.sh -t "ERROR ${SERVICE} deployment - "${NODE_ENV} -l "https://jenkins.indeema.com/job/Borevo/job/${SERVICE}" -m "See stage logs for more detail." -c "DANGARE"'
+    }
+  }
+}

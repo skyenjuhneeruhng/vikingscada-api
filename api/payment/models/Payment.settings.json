@@ -1,0 +1,39 @@
+{
+  "connection": "default",
+  "collectionName": "Payments",
+  "info": {
+    "name": "payment",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "user": {
+      "model": "user",
+      "via": "payments",
+      "plugin": "users-permissions"
+    },
+    "type": {
+      "type": "string",
+      "required": true
+    },
+    "custom_plan_id": {
+      "type": "string"
+    },
+    "status": {
+      "default": "subscribed",
+      "type": "string",
+      "required": true
+    },
+    "payment_name": {
+      "type": "string"
+    },
+    "payment_desc": {
+      "type": "string"
+    },
+    "purchased": {
+      "type": "integer"
+    }
+  }
+}

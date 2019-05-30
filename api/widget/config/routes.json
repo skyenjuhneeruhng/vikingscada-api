@@ -1,0 +1,84 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/account/widget/:dashboard_id",
+      "handler": "Widget.getWidgets",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/account/widget/:dashboard_id/:_id",
+      "handler": "Widget.getWidget",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/account/widget/:dashboard_id",
+      "handler": "Widget.createWidget",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/account/widget/:dashboard_id/:_id",
+      "handler": "Widget.updateWidget",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/account/widget/:dashboard_id/:_id",
+      "handler": "Widget.destroyWidget",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/widget",
+      "handler": "Widget.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/widget/:_id",
+      "handler": "Widget.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/widget",
+      "handler": "Widget.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/widget/:_id",
+      "handler": "Widget.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/widget/:_id",
+      "handler": "Widget.destroy",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

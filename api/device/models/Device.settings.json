@@ -1,0 +1,48 @@
+{
+  "connection": "default",
+  "collectionName": "Device",
+  "info": {
+    "name": "device",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "gateway": {
+      "model": "gateway",
+      "via": "devices"
+    },
+    "sensors": {
+      "collection": "sensor",
+      "dominant": true,
+      "via": "device"
+    },
+    "site": {
+      "model": "site",
+      "via": "devices"
+    },
+    "serial_number": {
+      "type": "string",
+      "required": true
+    },
+    "software_version": {
+      "type": "string",
+      "required": true
+    },
+    "location": {
+      "type": "string",
+      "required": true
+    },
+    "modbus_id": {
+      "type": "integer",
+      "required": true
+    },
+    "interface_description_object": {
+      "type": "json"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+node('slave-Docker') {
+
+  try {
+
+    stage '\u2705 Checkout'
+      checkout scm
+      def status = sh(script: './scripts/deploy/git-commit-dev.sh', returnStdout: true)
+      if(status){
+        currentBuild.result = 'ABORTED'
+        error("Build failed because of this and that..")
+      }
+      sh './scripts/slack-notifications.sh -t "Start new ${SERVICE} deployment - "${NODE_ENV} -l "https://jenkins.indeema.com/job/Vikings/job/${SERVICE}" -m "Preaparing to new ${SERVICE} build! " -c "GOOD"'
+
+    stage '\u2705 Copy sources'
+    sh 'tar cvzf /home/ubuntu/tmp/api/api-vikings-prod-source.tar.gz . --exclude-vcs'
+    sh 'scp /home/ubuntu/tmp/api/api-vikings-prod-source.tar.gz ubuntu@18.188.131.37:/home/ubuntu/tmp/'
+
+    sh 'rm /home/ubuntu/tmp/api/api-vikings-prod-source.tar.gz'
+
+    stage '\u2705 Run script'
+    sh 'ssh ubuntu@18.188.131.37 < ./scripts/deploy/dev/api/direct-deploy.sh'
+
+    stage '\u2705 Clean source folder'
+    sh 'rm -rf ./*'
+
+  } catch (Exception err) {
+    if( currentBuild.result != 'ABORTED' ){
+      currentBuild.result = 'FAILURE'
+      // emailext attachLog: true, body: "ERROR! See stage logs for more detail", compressLog: true, subject: 'UDB Jenkins - error web build', to: '${EMAILS}'
+      sh './scripts/slack-notifications.sh -t "ERROR ${SERVICE} deployment - "${NODE_ENV} -l "https://jenkins.indeema.com/job/Vikings/job/${SERVICE}" -m "See stage logs for more detail." -c "DANGARE"'
+    }
+  }
+}

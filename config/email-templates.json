@@ -1,0 +1,74 @@
+{
+  "low_notify_traffic": {
+    "from": {
+      "name": "VIKING SCADA",
+      "email": "vikingscada1@gmail.com"
+    },
+    "response_email": "",
+    "object": "Warning! 50mb traffic left.",
+    "message": ""
+  },
+  "medium_notify_traffic": {
+    "from": {
+      "name": "VIKING SCADA",
+      "email": "vikingscada1@gmail.com"
+    },
+    "response_email": "",
+    "object": "Warning! 25mb traffic left.",
+    "message": ""
+  },
+  "danger_notify_traffic": {
+    "from": {
+      "name": "VIKING SCADA",
+      "email": "vikingscada1@gmail.com"
+    },
+    "response_email": "",
+    "object": "Warning! 10mb traffic left.",
+    "message": ""
+  },
+  "alert_notification": {
+    "from": {
+      "name": "VIKING SCADA",
+      "email": "vikingscada1@gmail.com"
+    },
+    "response_email": "",
+    "object": "Warning!",
+    "message": ""
+  },
+  "buy_subscribe": {
+    "from": {
+      "name": "VIKING SCADA",
+      "email": "vikingscada1@gmail.com"
+    },
+    "response_email": "",
+    "object": "Thank you subscribe!",
+    "message": ""
+  },
+  "buy_custom": {
+    "from": {
+      "name": "VIKING SCADA",
+      "email": "vikingscada1@gmail.com"
+    },
+    "response_email": "",
+    "object": "Thanks for buying megabytes!",
+    "message": ""
+  },
+  "buy_subscribe_success": {
+    "from": {
+      "name": "VIKING SCADA",
+      "email": "vikingscada1@gmail.com"
+    },
+    "response_email": "",
+    "object": "Thanks for purchased subscription!",
+    "message": ""
+  },
+  "buy_subscribe_failed": {
+    "from": {
+      "name": "VIKING SCADA",
+      "email": "vikingscada1@gmail.com"
+    },
+    "response_email": "",
+    "object": "Subscription failed!",
+    "message": ""
+  }
+}

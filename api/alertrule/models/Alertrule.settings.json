@@ -1,0 +1,29 @@
+{
+  "connection": "default",
+  "collectionName": "AlertRule",
+  "info": {
+    "name": "alertrule",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "low": {
+      "type": "integer"
+    },
+    "normal": {
+      "type": "integer"
+    },
+    "danger": {
+      "type": "integer"
+    },
+    "widget": {
+      "model": "widget",
+      "via": "alert_rule"
+    },
+    "bitmask": {
+      "type": "json"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/alertrule",
+      "handler": "Alertrule.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/alertrule/:_id",
+      "handler": "Alertrule.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/alertrule",
+      "handler": "Alertrule.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/alertrule/:_id",
+      "handler": "Alertrule.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/alertrule/:_id",
+      "handler": "Alertrule.destroy",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/alerts/avaliable/:sensor_id",
+      "handler": "Alerts.checkAlertAvaliable",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/account/alerts/:sensor_id",
+      "handler": "Alerts.getAlertsForWidget",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/alerts",
+      "handler": "Alerts.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/alerts/:_id",
+      "handler": "Alerts.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/public/alert/confirm",
+      "handler": "Alerts.alertConfirm",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/alert/sms/confirm",
+      "handler": "Alerts.alertSMSConfirm",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/alert/email/confirm",
+      "handler": "Alerts.alertEmailConfirm",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/public/alert/config",
+      "handler": "Alerts.alertConfig",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/alerts",
+      "handler": "Alerts.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/alerts/:_id",
+      "handler": "Alerts.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/alerts/:_id",
+      "handler": "Alerts.destroy",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

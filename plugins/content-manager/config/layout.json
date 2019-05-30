@@ -1,0 +1,280 @@
+{
+  "company": {
+    "attributes": {
+      "company_name": {
+        "appearance": ""
+      },
+      "company_certificate": {
+        "appearance": ""
+      },
+      "address": {
+        "appearance": ""
+      },
+      "state": {
+        "appearance": ""
+      },
+      "zipcode": {
+        "appearance": ""
+      },
+      "status": {
+        "appearance": ""
+      },
+      "alert_sms_admin": {
+        "appearance": ""
+      },
+      "alert_sms_managers": {
+        "appearance": ""
+      },
+      "alert_sms_viewers": {
+        "appearance": ""
+      },
+      "alert_email_admin": {
+        "appearance": ""
+      },
+      "alert_email_managers": {
+        "appearance": ""
+      },
+      "alert_email_viewers": {
+        "appearance": ""
+      }
+    }
+  },
+  "site": {
+    "attributes": {
+      "name": {
+        "appearance": ""
+      },
+      "location": {
+        "appearance": ""
+      },
+      "type": {
+        "appearance": ""
+      }
+    }
+  },
+  "dashboard": {
+    "attributes": {
+      "name": {
+        "appearance": ""
+      },
+      "widgets": {
+        "appearance": ""
+      }
+    }
+  },
+  "gateway": {
+    "attributes": {
+      "name": {
+        "appearance": ""
+      },
+      "desc": {
+        "appearance": ""
+      },
+      "status": {
+        "appearance": ""
+      },
+      "lat": {
+        "appearance": ""
+      },
+      "long": {
+        "appearance": ""
+      },
+      "version": {
+        "appearance": ""
+      }
+    }
+  },
+  "device": {
+    "attributes": {
+      "name": {
+        "appearance": ""
+      },
+      "serial_number": {
+        "appearance": ""
+      },
+      "software_version": {
+        "appearance": ""
+      },
+      "location": {
+        "appearance": ""
+      },
+      "modbus_id": {
+        "appearance": ""
+      },
+      "interface_description_object": {
+        "appearance": ""
+      }
+    }
+  },
+  "sensor": {
+    "attributes": {
+      "name": {
+        "appearance": ""
+      },
+      "tag_name": {
+        "appearance": ""
+      },
+      "modbus_register_type": {
+        "appearance": ""
+      },
+      "modbus_register_address": {
+        "appearance": ""
+      },
+      "modbus_data_type": {
+        "appearance": ""
+      },
+      "modbus_data_size_bytes": {
+        "appearance": ""
+      },
+      "sampling_internal_ms": {
+        "appearance": ""
+      },
+      "value_multiplier": {
+        "appearance": ""
+      },
+      "units": {
+        "appearance": ""
+      },
+      "bitmask": {
+        "appearance": ""
+      },
+      "engineer_value_from": {
+        "appearance": ""
+      },
+      "engineer_value_to": {
+        "appearance": ""
+      }
+    }
+  },
+  "plan": {
+    "attributes": {
+      "name": {
+        "appearance": ""
+      },
+      "desc": {
+        "appearance": ""
+      },
+      "mb": {
+        "appearance": ""
+      },
+      "price": {
+        "appearance": ""
+      }
+    }
+  },
+  "payment": {
+    "attributes": {
+      "type": {
+        "appearance": ""
+      },
+      "custom_plan_id": {
+        "appearance": ""
+      },
+      "status": {
+        "appearance": ""
+      },
+      "payment_name": {
+        "appearance": ""
+      },
+      "payment_desc": {
+        "appearance": ""
+      },
+      "purchased": {
+        "appearance": ""
+      }
+    }
+  },
+  "widget": {
+    "attributes": {
+      "title": {
+        "appearance": ""
+      },
+      "settings": {
+        "appearance": ""
+      }
+    }
+  },
+  "alertRule": {
+    "attributes": {
+      "low": {
+        "appearance": ""
+      },
+      "normal": {
+        "appearance": ""
+      },
+      "danger": {
+        "appearance": ""
+      }
+    }
+  },
+  "alerts": {
+    "attributes": {
+      "readed": {
+        "appearance": ""
+      },
+      "type": {
+        "appearance": ""
+      },
+      "widget_id": {
+        "appearance": ""
+      },
+      "sensor_id": {
+        "appearance": ""
+      },
+      "sensor_value": {
+        "appearance": ""
+      },
+      "alert_value": {
+        "appearance": ""
+      },
+      "users": {
+        "appearance": ""
+      },
+      "bit": {
+        "appearance": ""
+      },
+      "sid": {
+        "appearance": ""
+      },
+      "email_code": {
+        "appearance": ""
+      },
+      "sms_code": {
+        "appearance": ""
+      }
+    }
+  },
+  "data": {
+    "attributes": {
+      "value": {
+        "appearance": ""
+      },
+      "sensor_id": {
+        "appearance": ""
+      },
+      "bitmask": {
+        "appearance": ""
+      }
+    }
+  },
+  "alertpriority": {
+    "attributes": {
+      "priority": {
+        "appearance": ""
+      },
+      "type": {
+        "appearance": ""
+      },
+      "enabled": {
+        "appearance": ""
+      }
+    }
+  },
+  "alertrule": {
+    "attributes": {
+      "bitmask": {
+        "appearance": ""
+      }
+    }
+  }
+}

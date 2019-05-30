@@ -1,0 +1,35 @@
+{
+  "connection": "default",
+  "collectionName": "AlertPriority",
+  "info": {
+    "name": "alertpriority",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "priority": {
+      "type": "integer",
+      "required": true
+    },
+    "type": {
+      "type": "string",
+      "required": true
+    },
+    "company": {
+      "model": "company",
+      "via": "alert_priorities"
+    },
+    "user": {
+      "model": "user",
+      "via": "user_priorities",
+      "plugin": "users-permissions"
+    },
+    "enabled": {
+      "default": true,
+      "type": "boolean",
+      "required": true
+    }
+  }
+}

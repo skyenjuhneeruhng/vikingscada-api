@@ -1,0 +1,123 @@
+{
+  "connection": "default",
+  "info": {
+    "name": "user",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "username": {
+      "type": "string",
+      "minLength": 3,
+      "unique": true,
+      "configurable": false,
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "minLength": 6,
+      "configurable": false,
+      "required": true,
+      "unique": true
+    },
+    "provider": {
+      "type": "string",
+      "configurable": false
+    },
+    "password": {
+      "type": "password",
+      "minLength": 6,
+      "configurable": false,
+      "private": true
+    },
+    "resetPasswordToken": {
+      "type": "string",
+      "configurable": false,
+      "private": true
+    },
+    "role": {
+      "model": "role",
+      "via": "users",
+      "plugin": "users-permissions",
+      "configurable": false
+    },
+    "company_admin": {
+      "model": "company",
+      "via": "admin"
+    },
+    "first_name": {
+      "type": "string",
+      "required": true
+    },
+    "last_name": {
+      "type": "string",
+      "required": true
+    },
+    "verified": {
+      "type": "boolean"
+    },
+    "verify_code": {
+      "type": "integer",
+      "private": true
+    },
+    "manager_company": {
+      "model": "company",
+      "via": "managers"
+    },
+    "phone": {
+      "type": "integer",
+      "required": true,
+      "unique": true
+    },
+    "site_manager": {
+      "model": "site",
+      "via": "managers"
+    },
+    "site_viewer": {
+      "model": "site",
+      "via": "viewers"
+    },
+    "viewer_company": {
+      "model": "company",
+      "via": "viewers"
+    },
+    "status": {
+      "default": "approved",
+      "type": "string",
+      "required": true
+    },
+    "dashboards": {
+      "collection": "dashboard",
+      "dominant": true,
+      "via": "viewers"
+    },
+    "payments": {
+      "collection": "payment",
+      "dominant": true,
+      "via": "user"
+    },
+    "subscribe_bytes": {
+      "type": "integer",
+      "default": 0,
+      "private": true
+    },
+    "custom_bytes": {
+      "type": "integer",
+      "default": 0,
+      "private": true
+    },
+    "user_priorities": {
+      "collection": "alertpriority",
+      "dominant": true,
+      "via": "user"
+    },
+    "alerts_readed": {
+      "collection": "alerts",
+      "dominant": true,
+      "via": "user_readed"
+    }
+  },
+  "collectionName": "users-permissions_user"
+}

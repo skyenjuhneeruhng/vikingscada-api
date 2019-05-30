@@ -1,0 +1,180 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/company",
+      "handler": "Company.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/account/managers",
+      "handler": "Company.findCompanyManagers",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/account/viewers",
+      "handler": "Company.findCompanyViewers",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/account/managers/:_id",
+      "handler": "Company.findCompanyManager",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/account/viewers/:_id",
+      "handler": "Company.findCompanyViewer",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/company/count",
+      "handler": "Company.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/company/:_id",
+      "handler": "Company.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/account/report",
+      "handler": "Company.getReport",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/company/register",
+      "handler": "Company.register",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/company/request/verificaton",
+      "handler": "Company.sendVerifyCode",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/company/verify",
+      "handler": "Company.verifyMe",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/company",
+      "handler": "Company.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/account/managers",
+      "handler": "Company.registerManager",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/account/viewers",
+      "handler": "Company.registerViewer",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/managers/:company_id",
+      "handler": "Company.createCompanyManager",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/viewers/:company_id",
+      "handler": "Company.createCompanyViewer",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/company/:_id",
+      "handler": "Company.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/account/managers/:_id",
+      "handler": "Company.updateManager",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/account/viewers/:_id",
+      "handler": "Company.updateViewer",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/company/:_id",
+      "handler": "Company.destroy",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/account/managers/:_id",
+      "handler": "Company.destroyManager",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/account/viewers/:_id",
+      "handler": "Company.destroyViewer",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

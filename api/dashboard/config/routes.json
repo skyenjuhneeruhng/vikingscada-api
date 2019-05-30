@@ -1,0 +1,84 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/dashboard",
+      "handler": "Dashboard.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/dashboard/:_id",
+      "handler": "Dashboard.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/account/dashboard/:site_id",
+      "handler": "Dashboard.findSiteDashboards",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/account/dashboard/:site_id/:_id",
+      "handler": "Dashboard.findSiteDashboard",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/dashboard",
+      "handler": "Dashboard.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/account/dashboard/:site_id",
+      "handler": "Dashboard.createCompanyDashboard",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/dashboard/:_id",
+      "handler": "Dashboard.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/account/dashboard/:site_id/:_id",
+      "handler": "Dashboard.updateCompanyDashboard",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/dashboard/:_id",
+      "handler": "Dashboard.destroy",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/account/dashboard/:site_id/:_id",
+      "handler": "Dashboard.destroyCompanyDashboard",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "user": {
+    "attributes": {
+      "first_name": {
+        "appearance": ""
+      },
+      "last_name": {
+        "appearance": ""
+      },
+      "phone": {
+        "appearance": ""
+      },
+      "verified": {
+        "appearance": ""
+      },
+      "verify_code": {
+        "appearance": ""
+      },
+      "status": {
+        "appearance": ""
+      },
+      "subscribe_bytes": {
+        "appearance": ""
+      },
+      "custom_bytes": {
+        "appearance": ""
+      }
+    }
+  }
+}

@@ -1,0 +1,3 @@
+#!/bin/sh
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/root/aleos/usr/readyagent/lib
+/root/aleos/usr/readyagent/bin/lua -e "package.path=package.path..';/root/aleos/usr/readyagent/lib/?.lua;/root/aleos/usr/readyagent/lib/?/init.lua;/root/aleos/usr/readyagent/lua/?.lua;/root/aleos/usr/readyagent/lua/?/init.lua;./?.lua' package.cpath=package.cpath..';/root/aleos/usr/readyagent/lib/?.so;/root/aleos/usr/readyagent/lua/?.so' ;" main.lua

@@ -1,0 +1,13 @@
+{
+	components =
+	{
+		{
+			name = "@sys.appcon.Viking_Scada_RV50_0_0_2_8",
+			location = "bin",
+			depends    = {},
+			provides   = {},
+			parameters = { purge=false, autostart=true },
+			version = "0.0.2.8",
+		}
+	}
+}

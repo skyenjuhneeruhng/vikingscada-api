@@ -1,0 +1,124 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/payment/public-key",
+      "handler": "Payment.getPublicKey",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/payment/webhook/stripe",
+      "handler": "Payment.handleWebHook",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/payment/plans",
+      "handler": "Payment.getPlans",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/payment/user/transactions/:user_id",
+      "handler": "Payment.getUserTransactions",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/payment/user/transactions/:user_id/:_id",
+      "handler": "Payment.getUserTransaction",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/payment/transactions",
+      "handler": "Payment.getMyTransactions",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/payment/transactions/:_id",
+      "handler": "Payment.getMyTransaction",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/payment",
+      "handler": "Payment.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/payment/:_id",
+      "handler": "Payment.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/payment/buy-custom/:_id",
+      "handler": "Payment.buyCustomMegabites",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/payment/subscribe/:_id",
+      "handler": "Payment.buySubscribe",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/payment",
+      "handler": "Payment.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/payment/:_id",
+      "handler": "Payment.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/payment/unsubscribe/me",
+      "handler": "Payment.unsubscribeMe",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/payment/:_id",
+      "handler": "Payment.destroy",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
